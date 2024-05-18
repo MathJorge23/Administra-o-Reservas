@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente_vermelho"
+    tools:context=".LoginRest">
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="163dp"
+        android:text="Login:"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:text="Senha:"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="100dp"
+
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_vinho"
+        android:text="Entrar"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senha" />
+
+    <Button
+        android:id="@+id/btnRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/background_vinho"
+        android:text="Registrar"
+        android:textColor="#56070C"
+        app:layout_constraintEnd_toEndOf="@+id/btnSair"
+        app:layout_constraintTop_toBottomOf="@+id/btnSair"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_vinho"
+        android:text="Sair"
+        android:textColor="#56070C"
+
+        app:layout_constraintEnd_toEndOf="@+id/senha"
+        app:layout_constraintTop_toBottomOf="@+id/senha" />
+</androidx.constraintlayout.widget.ConstraintLayout>

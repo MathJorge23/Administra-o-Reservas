@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente_vermelho"
+    tools:context=".admin_reservas.Menu">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="183dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="10dp"
+        android:text="O principal objetivo do Nakoo Sushi é servir pratos diversificados da culinária japonesa."
+        android:textColor="#56070C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:srcCompat="@mipmap/nakoo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/borda"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/Editar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_vinho"
+            android:text="Perfil"
+            android:textAlignment="center"
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtEditPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_vinho"
+            android:text="Reservas"
+            android:textAlignment="center"
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txtAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Administrar"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/txtResConfirmadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmadas"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/txtResRecusadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recusadas"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/txtResPendentes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pendentes"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_vinho"
+            android:text="Avaliações"
+            android:textAlignment="center"
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAvaRecebidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recebidas"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/txtAvaPendentes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pendentes"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
+
+        <TextView
+            android:id="@+id/txtLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:background="@drawable/background_vinho"
+            android:text="LOGOUT"
+            android:textAlignment="center"
+            android:textColor="#FFFDD0" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/divider_vinho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Confirmadas"
+        android:textColor="#56070C"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Pendentes"
+        android:textColor="#56070C"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/numResConf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="5"
+        android:textColor="#56070C"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/numResPen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="3"
+        android:textColor="#56070C"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView25"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Liberar Reservas."
+        android:textColor="#56070C"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/numResConf" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Periodo Inicial:"
+        android:textColor="#56070C"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Periodo Final:"
+        android:textColor="#56070C"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="5"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Quantidade:"
+        android:textColor="#56070C"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate2" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#56070C"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

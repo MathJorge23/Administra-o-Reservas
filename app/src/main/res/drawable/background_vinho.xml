@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#56070C" /> <!-- Cor vinho -->
+    <corners android:radius="0dp" /> <!-- Define o raio dos cantos como 0 para torná-los quadrados -->
+</shape>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "58469190320",
+    "project_id": "reservas-615b0",
+    "storage_bucket": "reservas-615b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58469190320:android:fab5d00006eff3a1d04975",
+        "android_client_info": {
+          "package_name": "com.example.aula"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoMPP4_2lkNlS8czUFQglh4FzqYpRk8OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58469190320:android:d0f6a1d8ffb34b8bd04975",
+        "android_client_info": {
+          "package_name": "com.example.telacadastro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoMPP4_2lkNlS8czUFQglh4FzqYpRk8OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

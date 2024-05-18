@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+    <!-- Section for Cuisines -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Escolha os tipos de culinária oferecidos"
+        android:textColor="#56070C"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/cb_italiana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italiana"
+        android:textColor="#56070C" />
+
+    <CheckBox
+        android:id="@+id/cb_japonesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Japonesa" />
+
+    <CheckBox
+        android:id="@+id/cb_nordestina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Nordestina" />
+
+    <CheckBox
+        android:id="@+id/cb_mexicana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Mexicana" />
+
+    <CheckBox
+        android:id="@+id/cb_pizzaria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pizzaria" />
+
+    <CheckBox
+        android:id="@+id/cb_mineira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Mineira" />
+
+    <CheckBox
+        android:id="@+id/cb_chinesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Chinesa" />
+
+    <CheckBox
+        android:id="@+id/cb_arabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Árabe" />
+
+    <CheckBox
+        android:id="@+id/cb_grega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Grega" />
+
+    <CheckBox
+        android:id="@+id/cb_francesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Francesa" />
+
+    <CheckBox
+        android:id="@+id/cb_coreana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Coreana" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginVertical="16dp"/>
+
+    <!-- Section for Services -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha os serviços oferecidos"
+        android:textColor="#56070C"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <CheckBox
+        android:id="@+id/cb_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Wi-Fi" />
+
+    <CheckBox
+        android:id="@+id/cb_ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Ar-condicionado" />
+
+    <CheckBox
+        android:id="@+id/cb_pet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Pet Friendly" />
+
+    <CheckBox
+        android:id="@+id/cb_couver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Couver Artístico" />
+
+    <CheckBox
+        android:id="@+id/cb_estacionamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Estacionamento" />
+
+    <CheckBox
+        android:id="@+id/cb_kids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Espaço Kids" />
+
+    <CheckBox
+        android:id="@+id/cb_arlivre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Área Livre" />
+
+    <CheckBox
+        android:id="@+id/cb_fumante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Área para Fumantes" />
+
+    <CheckBox
+        android:id="@+id/cb_selfservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Self-service" />
+
+    <CheckBox
+        android:id="@+id/cb_rodizio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56070C"
+        android:text="Rodízio" />
+
+  </LinearLayout>
+</ScrollView>

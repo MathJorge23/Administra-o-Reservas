@@ -12,12 +12,9 @@
         android:layout_width="120dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="150dp"
         android:background="@drawable/borda"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerViewReservas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -29,7 +26,8 @@
             android:background="@drawable/background_vinho"
             android:text="Perfil"
             android:textAlignment="center"
-            android:textColor="#FFFDD0" />
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtEditPerfil"
@@ -46,8 +44,17 @@
             android:background="@drawable/background_vinho"
             android:text="Reservas"
             android:textAlignment="center"
-            android:textColor="#FFFDD0" />
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
 
+
+        <TextView
+            android:id="@+id/txtAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Administrar"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
 
         <TextView
             android:id="@+id/txtResConfirmadas"
@@ -80,7 +87,8 @@
             android:background="@drawable/background_vinho"
             android:text="Avaliações"
             android:textAlignment="center"
-            android:textColor="#FFFDD0" />
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtAvaRecebidas"
@@ -102,14 +110,13 @@
             android:id="@+id/txtLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="324dp"
+            android:layout_marginTop="450dp"
             android:background="@drawable/background_vinho"
             android:text="LOGOUT"
             android:textAlignment="center"
             android:textColor="#FFFDD0" />
 
     </LinearLayout>
-
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"

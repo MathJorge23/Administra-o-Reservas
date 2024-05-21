@@ -13,10 +13,8 @@
         android:layout_height="77dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
         android:text="O principal objetivo do Nakoo Sushi é servir pratos diversificados da culinária japonesa."
         android:textColor="#56070C"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerViewReservas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
@@ -36,12 +34,9 @@
         android:layout_width="120dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="150dp"
         android:background="@drawable/borda"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerViewReservas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -53,7 +48,8 @@
             android:background="@drawable/background_vinho"
             android:text="Perfil"
             android:textAlignment="center"
-            android:textColor="#FFFDD0" />
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtEditPerfil"
@@ -70,8 +66,17 @@
             android:background="@drawable/background_vinho"
             android:text="Reservas"
             android:textAlignment="center"
-            android:textColor="#FFFDD0" />
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
 
+
+        <TextView
+            android:id="@+id/txtAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Administrar"
+            android:textAlignment="center"
+            android:textColor="#56070C" />
 
         <TextView
             android:id="@+id/txtResConfirmadas"
@@ -104,7 +109,8 @@
             android:background="@drawable/background_vinho"
             android:text="Avaliações"
             android:textAlignment="center"
-            android:textColor="#FFFDD0" />
+            android:textColor="#FFFDD0"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtAvaRecebidas"
@@ -126,14 +132,13 @@
             android:id="@+id/txtLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="324dp"
+            android:layout_marginTop="450dp"
             android:background="@drawable/background_vinho"
             android:text="LOGOUT"
             android:textAlignment="center"
             android:textColor="#FFFDD0" />
 
     </LinearLayout>
-
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"
@@ -152,5 +157,6 @@
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.telacadastro.avaliacao.AvaliacaoPendentes;
 import com.example.telacadastro.avaliacao.AvaliacoesRecebidas;
 import com.example.telacadastro.LoginRest;
 import com.example.telacadastro.R;
@@ -23,7 +27,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class Menu extends AppCompatActivity {
 
@@ -34,8 +42,10 @@ public class Menu extends AppCompatActivity {
      FirebaseAuth mAuth;
      FirebaseFirestore db;
 
+     EditText txtPeriodoIni, txtPeriodoFin,btnQtdReserva;
+
     TextView btnEditar,  btnResConfirmadas, btnResCanceladas,btnResPentende,
-            btnAvRecebidas, btnAvanPend, btnLogout;
+            btnAvRecebidas, btnAvanPend, btnLogout, btnConfirma,txtPeriodoAtual, txtQuantidadeDispo;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -51,9 +61,56 @@ public class Menu extends AppCompatActivity {
         btnAvRecebidas = (TextView) findViewById(R.id.txtAvaRecebidas);
         btnLogout = (TextView) findViewById(R.id.txtLogout);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerViewReservas);
+        btnConfirma = (TextView) findViewById(R.id.btnConfirmar);
+        txtPeriodoIni = (EditText) findViewById(R.id.txtDataI);
+        txtPeriodoFin = (EditText) findViewById(R.id.txtDataF);
+        btnQtdReserva= (EditText) findViewById(R.id.qtdReserva);
+
+
+        txtPeriodoAtual = (TextView) findViewById(R.id.periodoAtual);
+        txtQuantidadeDispo = (TextView) findViewById(R.id.lugaresDisp);
+
+
         reservas = new ArrayList<>();
         mAuth = FirebaseAuth.getInstance();
+
+
+        btnConfirma.setOnClickListener(v -> {
+            // Pegar os valores dos EditTexts
+            String dataInicioStr = txtPeriodoIni.getText().toString();
+            String dataFimStr = txtPeriodoFin.getText().toString();
+
+            // Converter as strings para datas
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            Date dataInicio = null;
+            Date dataFim = null;
+            try {
+                dataInicio = dateFormat.parse(dataInicioStr);
+                dataFim = dateFormat.parse(dataFimStr);
+            } catch (ParseException e) {
+                e.printStackTrace();
+                // Exibir mensagem de erro se o formato da data estiver incorreto
+                Toast.makeText(getApplicationContext(), "Formato de data inválido! Use dd/MM/yyyy.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Verificar se as datas foram convertidas corretamente
+            if (dataInicio != null && dataFim != null) {
+                // Exibir mensagem de confirmação
+                Toast.makeText(getApplicationContext(), "Envio confirmado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                // Atualizar os TextViews
+                // Use dateFormat.format(dataInicio) e dateFormat.format(dataFim) para formatar as datas corretamente
+                txtPeriodoAtual.setText("De: " + dateFormat.format(dataInicio) + " Até: " + dateFormat.format(dataFim));
+
+                // Atualizar a quantidade disponível. Pegue o texto do EditText e defina no TextView
+                txtQuantidadeDispo.setText(btnQtdReserva.getText().toString());
+            } else {
+                // Exibir mensagem de erro se as datas não forem válidas
+                Toast.makeText(getApplicationContext(), "Por favor, insira datas válidas!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         btnLogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
@@ -61,6 +118,12 @@ public class Menu extends AppCompatActivity {
             startActivity(i);
             finish();
         });
+
+        btnAvanPend.setOnClickListener(v -> {
+            Intent intent = new Intent( Menu.this, AvaliacaoPendentes.class);
+            startActivity(intent);
+        });
+
 
         btnResConfirmadas.setOnClickListener(v -> {
             Intent intent = new Intent( Menu.this, ReservasConfirmadas.class);
@@ -86,7 +149,6 @@ public class Menu extends AppCompatActivity {
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        buscarReservasHoje();
     }
     public void buscarReservasPendentes() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -103,7 +165,7 @@ public class Menu extends AppCompatActivity {
                                 Reserva reserva = document.toObject(Reserva.class);
                                 reservas.add(reserva);
                             }
-                            iniciarRecycler();
+
                         }
                     }
                 });
@@ -125,7 +187,7 @@ public class Menu extends AppCompatActivity {
                                 Reserva reserva = document.toObject(Reserva.class);
                                 reservas.add(reserva);
                             }
-                            iniciarRecycler();
+
                         }
                     }
                 });
@@ -146,7 +208,6 @@ public class Menu extends AppCompatActivity {
                                 Reserva reserva = document.toObject(Reserva.class);
                                 reservas.add(reserva);
                             }
-                            iniciarRecycler();
                         }
                     }
                 });

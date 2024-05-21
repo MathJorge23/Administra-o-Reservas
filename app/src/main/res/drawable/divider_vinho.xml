@@ -1,4 +1,4 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#56070C" /> <!-- Cor vinho -->
+    <solid android:color="#000000" /> <!-- Cor vinho -->
     <size android:height="1dp" /> <!-- Define a altura do divisor -->
 </shape>

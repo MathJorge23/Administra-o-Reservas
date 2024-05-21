@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.telacadastro.avaliacao.AvaliacaoPendentes;
 import com.example.telacadastro.avaliacao.AvaliacoesRecebidas;
 import com.example.telacadastro.LoginRest;
 import com.example.telacadastro.R;
@@ -35,7 +36,7 @@ public class ReservasPendentes extends AppCompatActivity {
     FirebaseFirestore db;
 
     TextView btnEditar,  btnResConfirmadas, btnResCanceladas,btnResPentende,
-            btnAvRecebidas, btnAvanPend, btnLogout;
+            btnAvRecebidas, btnAvanPend, btnLogout, btnAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class ReservasPendentes extends AppCompatActivity {
         btnAvanPend = (TextView) findViewById(R.id.txtAvaPendentes);
         btnAvRecebidas = (TextView) findViewById(R.id.txtAvaRecebidas);
         btnLogout = (TextView) findViewById(R.id.txtLogout);
+        btnAdmin = (TextView) findViewById(R.id.txtAdmin);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewReservas);
         reservas = new ArrayList<>();
@@ -59,6 +61,16 @@ public class ReservasPendentes extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), LoginRest.class);
             startActivity(i);
             finish();
+        });
+
+        btnAvanPend.setOnClickListener(v -> {
+            Intent intent = new Intent( ReservasPendentes.this, AvaliacaoPendentes.class);
+            startActivity(intent);
+        });
+
+        btnAdmin.setOnClickListener(v -> {
+            Intent intent = new Intent( ReservasPendentes.this, Menu.class);
+            startActivity(intent);
         });
 
         btnResConfirmadas.setOnClickListener(v -> {
